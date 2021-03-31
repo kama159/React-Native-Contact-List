@@ -21,7 +21,7 @@ this application consumes a contacts api. The contacts are listed and it is poss
 
 # Technologies
 - React-Native (main components: FlatList, ActivityIndicator, TouchableOpacity)
-- react-navigation (3.0.9)
+- React-navigation (3.0.9)
 
 # Api
 - axios
