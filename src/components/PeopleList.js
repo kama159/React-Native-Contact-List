@@ -1,16 +1,20 @@
 import React from "react";
-import { View } from "react-native";
+import { FlatList } from "react-native";
 
 import PeopleListItem from "./PeopleListItem";
 
 const PeopleList = ({ peoples, onPressPeopleListItem }) => {
-
   return (
-    <View>
-      {peoples.map((person, index) => {
-        return <PeopleListItem key={index} person={person} navigateToPersonDetail={onPressPeopleListItem} />;
-      })}
-    </View>
+    <FlatList
+      data={peoples}
+      renderItem={({ item }) => (
+        <PeopleListItem
+          person={item}
+          navigateToPersonDetail={onPressPeopleListItem}
+        />
+      )}
+      keyExtractor={item => item.email }
+    />
   );
 };
 
